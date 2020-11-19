@@ -24,10 +24,10 @@ class FileStoreRequest extends FormRequest
     public function rules()
     {
         return [
-            'parent_id' => 'required|integer',
-            'order'     => 'required|integer',
-            'file'      => 'required|mimes:jpeg,png,bmp,gif,svg,mp4,qt',
-            'eFile'     => 'required|mimes:jpeg,png,bmp,gif,svg,mp4,qt',
+//            'parent_id' => 'required|integer',
+//            'order'     => 'required|integer',
+//            'file'      => 'required',
+//            'eFile'     => 'required',
         ];
     }
 }

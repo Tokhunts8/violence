@@ -12,7 +12,7 @@
                         <div class="form-group row">
                             <label for="Name" class="col-sm-3 text-right control-label col-form-label">Name</label>
                             <div class="col-sm-9">
-                                <input type="text" required class="form-control" id="Name" placeholder="Name"
+                                <input type="text" class="form-control" id="Name" placeholder="Name"
                                        name="name" value="{{old('name')}}">
                                 @error('name')
                                 <div class="alert alert-danger">{{ $message }}</div>
@@ -78,7 +78,7 @@
                                     <option value="" @if(null === old('parent_id')) selected @endif>Չունի</option>
                                     @foreach($sections as $key => $value)
                                         <option @if($value->id === old('parent_id')) selected @endif
-                                        value="{{$value->id}}">{{$value->name}}</option>
+                                        value="{{$value->id}}">{{$value->name ?? substr(strip_tags($value->description), 0, 35) . '...'}}</option>
                                     @endforeach
                                 </select>
                                 @error('parent_id')

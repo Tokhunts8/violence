@@ -40,10 +40,39 @@
                             </div>
                         </div>
                         <div class="form-group row">
+                            <label class="col-sm-3 text-right control-label col-form-label" for="preview">Video Preview
+                                Upload</label>
+                            <div class="col-sm-9">
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="preview" name="preview"
+                                           value="{{asset($file->preview)}}">
+                                    <label class="custom-file-label" for="preview"
+                                           style="width: 100%; height:36px;">Choose file If You Want Update...</label>
+                                    @error('preview')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                    @enderror
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-3 text-right control-label col-form-label" for="ePreview">Video Preview
+                                Upload (English)</label>
+                            <div class="col-sm-9">
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="ePreview" name="ePreview">
+                                    <label class="custom-file-label" for="ePreview"
+                                           style="width: 100%; height:36px;">Choose file If You Want Update...</label>
+                                    @error('ePreview')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                    @enderror
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
                             <label for="Order" class="col-sm-3 text-right control-label col-form-label">Order</label>
                             <div class="col-sm-9">
                                 <input type="number" required class="form-control" id="Order" placeholder="Order"
-                                       value="{{$section->order}}" name="order">
+                                       value="{{$file->order}}" name="order">
                                 @error('order')
                                 <div class="alert alert-danger">{{ $message }}</div>
                                 @enderror
@@ -56,7 +85,7 @@
                                 <select class="select2 form-control custom-select" id="parent" name="parent_id">
                                     @foreach($sections as $key => $value)
                                         <option @if($value->id === $file->parent_id) selected @endif
-                                        value="{{$value->id}}">{{$value->name}}</option>
+                                        value="{{$value->id}}">{{$value->name ?? substr(strip_tags($value->description), 0, 35) . '...'}}</option>
                                     @endforeach
                                 </select>
                                 @error('parent_id')

@@ -19,6 +19,8 @@
                                 <th scope="col">PARENT</th>
                                 <th scope="col">FILE</th>
                                 <th scope="col">FILE (ENGLISH)</th>
+                                <th scope="col">VIDEO PREVIEW</th>
+                                <th scope="col">VIDEO PREVIEW (ENGLISH)</th>
                                 <th scope="col">ORDER</th>
                                 <th scope="col">ACTIONS</th>
                             </tr>
@@ -34,6 +36,16 @@
                                     </td>
                                     <td>
                                         <img src="{{asset($value->eFile)}}"
+                                             class="blog-image"
+                                             alt="file">
+                                    </td>
+                                    <td>
+                                        <img src="{{asset($value->preview)}}"
+                                             class="blog-image"
+                                             alt="file">
+                                    </td>
+                                    <td>
+                                        <img src="{{asset($value->ePreview)}}"
                                              class="blog-image"
                                              alt="file">
                                     </td>

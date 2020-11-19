@@ -19,6 +19,8 @@ class CreateFilesTable extends Migration
             $table->foreign('parent_id')->references('id')->on('sections')->onDelete('cascade')->onUpdate('cascade');
             $table->string('file')->nullable();
             $table->string('eFile')->nullable();
+            $table->string('preview')->nullable();
+            $table->string('ePreview')->nullable();
             $table->bigInteger('order');
         });
     }

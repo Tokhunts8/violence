@@ -79,7 +79,7 @@
                                     <option value="" @if(null === $section->parent_id) selected @endif>Չունի</option>
                                     @foreach($sections as $key => $value)
                                         <option @if($value->id === $section->parent_id) selected @endif
-                                        value="{{$value->id}}">{{$value->name}}</option>
+                                        value="{{$value->id}}">{{$value->name ?? substr(strip_tags($value->description), 0, 35) . '...'}}</option>
                                     @endforeach
                                 </select>
                                 @error('parent_id')

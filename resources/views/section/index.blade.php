@@ -31,17 +31,17 @@
                             <tbody>
                             @foreach($sections as $key => $value)
                                 <tr>
-                                    <td class="child-show">SHOW CHILD</td>
+                                    <td class="child-show cursor-pointer">SHOW CHILD</td>
                                     <td>{{$value->name}}</td>
                                     <td>{!! $value->description !!}</td>
                                     <td>{{$value->eName}}</td>
                                     <td>{!! $value->eDescription !!}</td>
-                                    <td>{{$value->url}}</td>
+                                    <td>{{substr($value->url, 0, 30) . '...'}}</td>
 
                                     <td><span class="font-medium">{{$value->order}}</span></td>
                                     <td>
                                             <span
-                                                class="font-medium">{{$value->page == 1 ? 'Մեր մասին' : 'Մեր ֆոնդը'}}</span>
+                                                class="font-medium">{{$value->page}}</span>
                                     </td>
                                     <td>
                                             <span
@@ -76,12 +76,12 @@
                                             <td>{!! $v->description !!}</td>
                                             <td>{{$v->eName}}</td>
                                             <td>{!! $v->eDescription !!}</td>
-                                            <td>{{$v->url}}</td>
+                                            <td>{{substr($v->url, 0, 30) . '...'}}</td>
 
                                             <td><span class="font-medium">{{$v->order}}</span></td>
                                             <td>
                                             <span
-                                                class="font-medium">{{$v->page == 1 ? 'Մեր մասին' : 'Մեր ֆոնդը'}}</span>
+                                                class="font-medium">{{$v->page}}</span>
                                             </td>
                                             <td>
                                             <span

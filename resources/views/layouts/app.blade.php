@@ -120,8 +120,8 @@
                                 class="mdi mdi-chart-timeline"></i><span class="hide-menu">Files</span></a>
                     </li>
                     <li class="sidebar-item"><a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                                href="{{url('admin/contact')}}" aria-expanded="false"><i
-                                class="mdi mdi-account-multiple"></i><span class="hide-menu">Contacts</span></a></li>
+                                                href="{{url('admin/chart')}}" aria-expanded="false"><i
+                                class="mdi mdi-account-multiple"></i><span class="hide-menu">Charts</span></a></li>
                 </ul>
             </nav>
             <!-- End Sidebar navigation -->

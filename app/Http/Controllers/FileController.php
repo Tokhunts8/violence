@@ -28,7 +28,7 @@ class FileController extends Controller
      */
     public function create(): \Illuminate\View\View
     {
-        $sections = Section::select('id', 'name')->get();
+        $sections = Section::select('id', 'name', 'description')->get();
         return view("file.create", ["sections" => $sections]);
     }
 
@@ -44,13 +44,29 @@ class FileController extends Controller
         $file->order     = $request->order;
         $file->parent_id = $request->parent_id;
 
-        $imageName  = time() . '.' . $request->file->getClientOriginalExtension();
-        $file->file = 'images/sections/' . $imageName;
-        $request->file->move(public_path('images/sections'), $imageName);
+        if ($request->file) {
+            $imageName  = time() . '.' . $request->file->getClientOriginalExtension();
+            $file->file = 'images/sections/' . $imageName;
+            $request->file->move(public_path('images/sections'), $imageName);
+        }
 
-        $imageName   = time() . '1.' . $request->eFile->getClientOriginalExtension();
-        $file->eFile = 'images/sections/' . $imageName;
-        $request->eFile->move(public_path('images/sections'), $imageName);
+        if ($request->eFile) {
+            $imageName   = time() . '1.' . $request->eFile->getClientOriginalExtension();
+            $file->eFile = 'images/sections/' . $imageName;
+            $request->eFile->move(public_path('images/sections'), $imageName);
+        }
+
+        if ($request->preview) {
+            $imageName     = time() . '2.' . $request->preview->getClientOriginalExtension();
+            $file->preview = 'images/sections/' . $imageName;
+            $request->preview->move(public_path('images/sections'), $imageName);
+        }
+
+        if ($request->ePreview) {
+            $imageName      = time() . '3.' . $request->ePreview->getClientOriginalExtension();
+            $file->ePreview = 'images/sections/' . $imageName;
+            $request->ePreview->move(public_path('images/sections'), $imageName);
+        }
 
         $file->save();
         return redirect("admin/file");
@@ -75,8 +91,8 @@ class FileController extends Controller
      */
     public function edit(File $file): \Illuminate\View\View
     {
-        $sections = Section::select('id', 'name')->get();
-        return view("file.create", ["sections" => $sections, "file" => $file]);
+        $sections = Section::select('id', 'name', 'description')->get();
+        return view("file.edit", ["sections" => $sections, "file" => $file]);
     }
 
     /**
@@ -100,6 +116,18 @@ class FileController extends Controller
             $imageName   = time() . '1.' . $request->eFile->getClientOriginalExtension();
             $file->eFile = 'images/sections/' . $imageName;
             $request->eFile->move(public_path('images/sections'), $imageName);
+        }
+
+        if ($request->preview) {
+            $imageName     = time() . '2.' . $request->preview->getClientOriginalExtension();
+            $file->preview = 'images/sections/' . $imageName;
+            $request->preview->move(public_path('images/sections'), $imageName);
+        }
+
+        if ($request->ePreview) {
+            $imageName      = time() . '3.' . $request->ePreview->getClientOriginalExtension();
+            $file->ePreview = 'images/sections/' . $imageName;
+            $request->ePreview->move(public_path('images/sections'), $imageName);
         }
 
         $file->save();
