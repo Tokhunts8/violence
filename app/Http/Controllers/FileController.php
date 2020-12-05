@@ -44,7 +44,7 @@ class FileController extends Controller
         $file->order     = $request->order;
         $file->parent_id = $request->parent_id;
 
-        if ($request->file) {
+        if ($request->exists('file')) {
             $imageName  = time() . '.' . $request->file->getClientOriginalExtension();
             $file->file = 'images/sections/' . $imageName;
             $request->file->move(public_path('images/sections'), $imageName);
@@ -106,8 +106,8 @@ class FileController extends Controller
     {
         $file->order     = $request->order;
         $file->parent_id = $request->parent_id;
-
-        if ($request->file) {
+        
+        if ($request->exists('file')) {
             $imageName  = time() . '.' . $request->file->getClientOriginalExtension();
             $file->file = 'images/sections/' . $imageName;
             $request->file->move(public_path('images/sections'), $imageName);

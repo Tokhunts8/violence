@@ -22,14 +22,25 @@
                             </div>
                         </div>
                         <div class="text-right text-md-left">
-                            <a
-                                href="{{$section->url}}"
-                                class="read-more secondary-white font-weight-bold text-decoration-none"
-                                target="_blank"
-                            >
-                                <span class="mr-1">Read more</span>
-                                <span class="icon-read-more"></span>
-                            </a>
+                            @if(!empty($section->url))
+                                <a
+                                    href="{{$section->url}}"
+                                    class="read-more secondary-primary font-weight-bold text-decoration-none"
+                                    target="_blank"
+                                >
+                                    <span class="mr-1">@if($locale === 'en') Read more @elseif($locale === 'am') Ավելին @endif</span>
+                                    <span class="icon-read-more"></span>
+                                </a>
+                            @else
+                                <a
+                                    href="{{asset($section->mainFiles[count($section->mainFiles) - 1]->file)}}"
+                                    class="read-more secondary-primary font-weight-bold text-decoration-none"
+                                    target="_blank"
+                                >
+                                    <span class="mr-1">@if($locale === 'en') Read more @elseif($locale === 'am') Ավելին @endif</span>
+                                    <span class="icon-read-more"></span>
+                                </a>
+                            @endif
                         </div>
                     </div>
                 </div>
@@ -43,13 +54,11 @@
                                 </div>
 
                                 @foreach($section->mainFiles as $file)
-                                    @if($file !== $section->mainFiles[count($section->mainFiles) - 1])
-                                        <img
-                                            src="{{asset($file->file)}}"
-                                            class="mb-5 d-block w-100"
-                                            alt="chart"
-                                        />
-                                    @endif
+                                    <img
+                                        src="{{asset($file->file)}}"
+                                        class="mb-5 d-block w-100"
+                                        alt="chart"
+                                    />
                                 @endforeach
                                 <div
                                     class="d-flex justify-content-between flex-column flex-md-row align-items-md-center"
@@ -58,14 +67,25 @@
                                         {!! strip_tags($section->description, '<strong>') !!}
                                     </div>
                                     <div class="text-right text-md-left">
-                                        <a
-                                            href="{{asset($section->mainFiles[count($section->mainFiles) - 1]->file)}}"
-                                            class="read-more secondary-primary font-weight-bold text-decoration-none"
-                                            target="_blank"
-                                        >
-                                            <span class="mr-1">Read more</span>
-                                            <span class="icon-read-more"></span>
-                                        </a>
+                                        @if(!empty($section->url))
+                                            <a
+                                                href="{{$section->url}}"
+                                                class="read-more secondary-primary font-weight-bold text-decoration-none"
+                                                target="_blank"
+                                            >
+                                                <span class="mr-1">@if($locale === 'en') Read more @elseif($locale === 'am') Ավելին @endif</span>
+                                                <span class="icon-read-more"></span>
+                                            </a>
+                                        @else
+                                            <a
+                                                href="{{asset($section->mainFiles[count($section->mainFiles) - 1]->file)}}"
+                                                class="read-more secondary-primary font-weight-bold text-decoration-none"
+                                                target="_blank"
+                                            >
+                                                <span class="mr-1">@if($locale === 'en') Read more @elseif($locale === 'am') Ավելին @endif</span>
+                                                <span class="icon-read-more"></span>
+                                            </a>
+                                        @endif
                                     </div>
                                 </div>
                             </div>
@@ -107,14 +127,25 @@
                                                 {!! $desc !!}
                                             </div>
                                             <div class="text-right text-md-left">
-                                                <a
-                                                    href="{{$section->url}}"
-                                                    class="read-more secondary-primary font-weight-bold text-decoration-none"
-                                                    target="_blank"
-                                                >
-                                                    <span class="mr-1">Read more</span>
-                                                    <span class="icon-read-more"></span>
-                                                </a>
+                                                @if(!empty($section->url))
+                                                    <a
+                                                        href="{{$section->url}}"
+                                                        class="read-more secondary-primary font-weight-bold text-decoration-none"
+                                                        target="_blank"
+                                                    >
+                                                        <span class="mr-1">@if($locale === 'en') Read more @elseif($locale === 'am') Ավելին @endif</span>
+                                                        <span class="icon-read-more"></span>
+                                                    </a>
+                                                @else
+                                                    <a
+                                                        href="{{asset($section->mainFiles[count($section->mainFiles) - 1]->file)}}"
+                                                        class="read-more secondary-primary font-weight-bold text-decoration-none"
+                                                        target="_blank"
+                                                    >
+                                                        <span class="mr-1">@if($locale === 'en') Read more @elseif($locale === 'am') Ավելին @endif</span>
+                                                        <span class="icon-read-more"></span>
+                                                    </a>
+                                                @endif
                                             </div>
                                         </div>
                                     @endif
@@ -130,19 +161,35 @@
                                     <div class="row">
                                         @foreach($section->child as $child)
                                             <div class="col-md-6 mb-4 mb-md-0">
-                                                <a href="{{$child->url}}"
-                                                   target="_blank"
-                                                   class="d-flex align-items-center doc-container text-decoration-none">
-                                                    <i class="icon-document mr-4"></i>
-                                                    <div>
-                                                        <div class="font-weight-bold font-size-20">
-                                                            {{$child->name}}
+                                                @if(!empty($child->url))
+                                                    <a href="{{$child->url}}"
+                                                       target="_blank"
+                                                       class="d-flex align-items-center doc-container text-decoration-none">
+                                                        <i class="icon-document mr-4"></i>
+                                                        <div>
+                                                            <div class="font-weight-bold font-size-20">
+                                                                {{$child->name}}
+                                                            </div>
+                                                            <span
+                                                                class="font-weight-bold font-size-20">{!! strip_tags($child->description) !!}
+                                                            </span>
                                                         </div>
-                                                        <span
-                                                            class="font-weight-bold font-size-20">{!! strip_tags($child->description) !!}
-                                                        </span>
-                                                    </div>
-                                                </a>
+                                                    </a>
+                                                @else
+                                                    <a href="{{asset($child->mainFiles[count($child->mainFiles) - 1]->file)}}"
+                                                       target="_blank"
+                                                       class="d-flex align-items-center doc-container text-decoration-none">
+                                                        <i class="icon-document mr-4"></i>
+                                                        <div>
+                                                            <div class="font-weight-bold font-size-20">
+                                                                {{$child->name}}
+                                                            </div>
+                                                            <span
+                                                                class="font-weight-bold font-size-20">{!! strip_tags($child->description) !!}
+                                                            </span>
+                                                        </div>
+                                                    </a>
+                                                @endif
                                             </div>
                                         @endforeach
                                     </div>

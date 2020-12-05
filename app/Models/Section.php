@@ -34,6 +34,7 @@ class Section extends Model
         else {
             $select = ['id', 'eName as name', 'eDescription as description', 'type', 'url', 'parent_id'];
         }
+
         return $this->hasMany(Section::class, 'parent_id', 'id')->select($select)->orderBy('order', 'asc');
     }
 

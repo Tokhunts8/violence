@@ -29,9 +29,25 @@
             @elseif($section->type === 4)
                 <div class="home-description bg-secondary">
                     <div class="container-fluid custom-container text-center text-light">
-                        {{$section->description}}
+                        {{strip_tags($section->description)}}
                     </div>
                 </div>
+            @elseif($section->type === 12)
+            <div class="images">
+                <div class="container-fluid custom-container text-center">
+                  <div class="row">
+                    @foreach($section->mainFiles as $file)
+                        <div class="col-sm-4 mb-4 mb-sm-0">
+                          <img
+                            src="{{asset($file->file)}}"
+                            class="w-100"
+                            alt="vision"
+                          />
+                        </div>
+                    @endforeach
+                  </div>
+                </div>
+          </div>
             @elseif($section->type === 7)
                 <div class="video-slider">
                     <div class="container-fluid custom-container text-center">

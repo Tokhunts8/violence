@@ -19,7 +19,7 @@
                         </div>
                         <div id="accordion">
                             <ul class="list-unstyled white-border-list mb-5">
-                                @foreach($section->children as $child)
+                                @foreach($section->child as $child)
                                     <li class="card bg-primary">
                                         <div
                                             class="font-size-24 font-weight-bolder card-header p-0 bg-primary border-0"

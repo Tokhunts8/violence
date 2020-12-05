@@ -43,22 +43,18 @@
         >
             <ul class="nav-language list-unstyled mb-0 mb-5 pt-4 pl-0 pr-0">
                 <li
-                    class="nav-language-item text-uppercase {{$locale === 'am' ? 'active' : ''}} font-weight-bolder mr-2"
+                    class="nav-language-item text-uppercase font-weight-bolder mr-2"
                 >
                     <a
                         class="nav-language-item-link p-0 font-weight-bolder text-decoration-none"
-                        href="{{url('/main/am/index')}}"
+                        href="{{url('/main/am/' . $view)}}"
                     >ՀԱՅ</a
                     >
                 </li>
                 <li
-                    class="nav-language-item {{$locale === 'en' ? 'active' : ''}} text-uppercase font-weight-bolder"
+                    class="nav-language-item active text-uppercase font-weight-bolder"
                 >
-                    <a
-                        class="nav-language-item-link p-0 font-weight-bolder text-decoration-none"
-                        href="{{url('/main/en/index')}}"
-                    >ENG</a
-                    >
+                    >ENG
                 </li>
             </ul>
             <i class="icon-quit mr-md-2 position-absolute text-light"></i>
@@ -71,7 +67,7 @@
                     @if($view === 'index')
                         THE CAMPAIGN
                     @else
-                        <a class="nav-link  p-0" href="{{url('/main/am/domestic')}}"
+                        <a class="nav-link  p-0" href="{{url('/main/en/index')}}"
                         >THE CAMPAIGN</a
                         >
                     @endif
@@ -82,7 +78,7 @@
                     @if($view === 'domestic')
                         DOMESTIC VIOLENCE
                     @else
-                        <a class="nav-link  p-0" href="{{url('/main/am/domestic')}}"
+                        <a class="nav-link  p-0" href="{{url('/main/en/domestic')}}"
                         >DOMESTIC VIOLENCE</a
                         >
                     @endif
@@ -93,14 +89,14 @@
                     @if($view === 'statistics')
                         STATISTICS
                     @else
-                        <a class="nav-link p-0" href="{{url('/main/am/statistics')}}">STATISTICS</a>
+                        <a class="nav-link p-0" href="{{url('/main/en/statistics')}}">STATISTICS</a>
                     @endif
                 </li>
                 <li class="nav-item text-uppercase {{$view === 'your-rights' ? 'active' : ''}} font-weight-bold">
                     @if($view === 'your-rights')
                         KNOW YOUR RIGHTS
                     @else
-                        <a class="nav-link p-0" href="{{url('/main/am/your-rights')}}"
+                        <a class="nav-link p-0" href="{{url('/main/en/your-rights')}}"
                         >KNOW YOUR RIGHTS</a
                         >
                     @endif
@@ -119,31 +115,18 @@
             </div>
             <ul class="nav-language list-unstyled mb-0 d-none d-md-flex">
                 <li
-                    class="nav-language-item {{$locale === 'am' ? 'active' : ''}} text-uppercase font-weight-bolder mr-2"
+                    class="nav-language-item text-uppercase font-weight-bolder mr-2"
                 >
-                    @if($locale === 'am')
-                        ՀԱՅ
-                    @else
                         <a
                             class="nav-language-item-link p-0 font-weight-bolder text-decoration-none"
-                            href="{{url('/main/am/index')}}"
+                            href="{{url('/main/am/' . $view)}}"
                         >ՀԱՅ</a
                         >
-                    @endif
                 </li>
                 <li
-                    class="nav-language-item {{$locale === 'en' ? 'active' : ''}} text-uppercase font-weight-bolder"
+                    class="nav-language-item active text-uppercase font-weight-bolder"
                 >
-                    @if($locale === 'en')
                         ENG
-                    @else
-                        <a
-                            class="nav-language-item-link p-0 font-weight-bolder text-decoration-none"
-                            href="{{url('/main/en/index')}}"
-                        >ENG</a
-                        >
-                    @endif
-
                 </li>
             </ul>
             <div
@@ -208,6 +191,16 @@
                             target="_blank"
                         >
                             1-16
+                        </a>
+                    </div>
+                    <div class="mb-4 mb-sm-0">
+                        <span class="text-light d-inline-block mb-2">Ministry of Social Affairs and Labour</span>
+                        <a
+                            href="http://www.mlsa.am/ "
+                            class="font-weight-bolder government-phones d-block text-decoration-none footer-link"
+                            target="_blank"
+                        >
+                            1-14
                         </a>
                     </div>
                 </div>

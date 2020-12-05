@@ -43,20 +43,16 @@
         >
             <ul class="nav-language list-unstyled mb-0 mb-5 pt-4 pl-0 pr-0">
                 <li
-                    class="nav-language-item text-uppercase {{$locale === 'am' ? 'active' : ''}} font-weight-bolder mr-2"
+                    class="nav-language-item text-uppercase active font-weight-bolder mr-2"
                 >
-                    <a
-                        class="nav-language-item-link p-0 font-weight-bolder text-decoration-none"
-                        href="{{url('/main/am/index')}}"
-                    >ՀԱՅ</a
-                    >
+                    >ՀԱՅ
                 </li>
                 <li
-                    class="nav-language-item {{$locale === 'en' ? 'active' : ''}} text-uppercase font-weight-bolder"
+                    class="nav-language-item text-uppercase font-weight-bolder"
                 >
                     <a
                         class="nav-language-item-link p-0 font-weight-bolder text-decoration-none"
-                        href="{{url('/main/en/index')}}"
+                        href="{{url('/main/en/' . $view)}}"
                     >ENG</a
                     >
                 </li>
@@ -69,10 +65,10 @@
                     class="nav-item mr-4 mb-5 mb-md-0 d-inline-block mr-xl-5 {{$view === 'index' ? 'active' : ''}} text-uppercase font-weight-bold"
                 >
                     @if($view === 'index')
-                        THE CAMPAIGN
+                        ԱՐՇԱՎԻ ՄԱՍԻՆ
                     @else
                         <a class="nav-link  p-0" href="{{url('/main/am/index')}}"
-                        >THE CAMPAIGN</a
+                        >ԱՐՇԱՎԻ ՄԱՍԻՆ</a
                         >
                     @endif
                 </li>
@@ -80,10 +76,10 @@
                     class="nav-item mr-4 mb-5 mb-md-0 d-inline-block mr-xl-5 {{$view === 'domestic' ? 'active' : ''}} text-uppercase font-weight-bold"
                 >
                     @if($view === 'domestic')
-                        DOMESTIC VIOLENCE
+                        ԸՆՏԱՆԵԿԱՆ ԲՌՆՈՒԹՅՈՒՆ
                     @else
                         <a class="nav-link  p-0" href="{{url('/main/am/domestic')}}"
-                        >DOMESTIC VIOLENCE</a
+                        >ԸՆՏԱՆԵԿԱՆ ԲՌՆՈՒԹՅՈՒՆ</a
                         >
                     @endif
                 </li>
@@ -91,17 +87,17 @@
                     class="nav-item mr-4 mb-5 mb-md-0 d-inline-block mr-xl-5 {{$view === 'statistics' ? 'active' : ''}} text-uppercase font-weight-bold"
                 >
                     @if($view === 'statistics')
-                        STATISTICS
+                        ՎԻՃԱԿԱԳՐՈՒԹՅՈՒՆ
                     @else
-                        <a class="nav-link p-0" href="{{url('/main/am/statistics')}}">STATISTICS</a>
+                        <a class="nav-link p-0" href="{{url('/main/am/statistics')}}">ՎԻՃԱԿԱԳՐՈՒԹՅՈՒՆ</a>
                     @endif
                 </li>
                 <li class="nav-item text-uppercase {{$view === 'your-rights' ? 'active' : ''}} font-weight-bold">
                     @if($view === 'your-rights')
-                        KNOW YOUR RIGHTS
+                        ԻՄԱՑԻՐ ՔՈ ԻՐԱՎՈՒՆՔՆԵՐԸ
                     @else
                         <a class="nav-link p-0" href="{{url('/main/am/your-rights')}}"
-                        >KNOW YOUR RIGHTS</a
+                        >ԻՄԱՑԻՐ ՔՈ ԻՐԱՎՈՒՆՔՆԵՐԸ</a
                         >
                     @endif
                 </li>
@@ -113,36 +109,24 @@
             <div
                 class="nav-helpline flex-grow-1 flex-md-grow-0 h-100 d-flex align-items-center bg-light text-secondary"
             >
-            <span class="mr-3 h5 mb-0 font-weight-bolder">Թեժ գիծ:</span
+            <span class="mr-3 h5 mb-0 font-weight-bolder">Թեժ գիծ</span
             ><span class="icon-phone text-primary font-size-30 mr-2"></span>
                 <span class="h1 font-weight-bolder font-size-40 mb-0">114</span>
             </div>
             <ul class="nav-language list-unstyled mb-0 d-none d-md-flex">
                 <li
-                    class="nav-language-item {{$locale === 'am' ? 'active' : ''}} text-uppercase font-weight-bolder mr-2"
+                    class="nav-language-item active text-uppercase font-weight-bolder mr-2"
                 >
-                    @if($locale === 'am')
                         ՀԱՅ
-                    @else
-                        <a
-                            class="nav-language-item-link p-0 font-weight-bolder text-decoration-none"
-                            href="{{url('/main/am/index')}}"
-                        >ՀԱՅ</a
-                        >
-                    @endif
                 </li>
                 <li
-                    class="nav-language-item {{$locale === 'en' ? 'active' : ''}} text-uppercase font-weight-bolder"
+                    class="nav-language-item text-uppercase font-weight-bolder"
                 >
-                    @if($locale === 'en')
-                        ENG
-                    @else
                         <a
                             class="nav-language-item-link p-0 font-weight-bolder text-decoration-none"
-                            href="{{url('/main/en/index')}}"
+                            href="{{url('/main/en/' . $view)}}"
                         >ENG</a
                         >
-                    @endif
 
                 </li>
             </ul>
@@ -181,7 +165,7 @@
                     <div class="mb-4 mb-sm-0">
                         <span class="text-light d-inline-block mb-2">Ոստիկանություն</span>
                         <a
-                            href="https://www.police.am/en"
+                            href="https://www.police.am/"
                             class="font-weight-bolder government-phones d-block text-decoration-none footer-link"
                             target="_blank"
                         >
@@ -193,7 +177,7 @@
                 >Արտակարգ իրավիճակներ</span
                 >
                         <a
-                            href="http://mes.am/en/"
+                            href="http://mes.am/"
                             class="font-weight-bolder government-phones d-block text-decoration-none footer-link"
                             target="_blank"
                         >
@@ -201,13 +185,23 @@
                         </a>
                     </div>
                     <div class="mb-4 mb-sm-0">
-                        <span class="text-light d-inline-block mb-2">ՄԻՊ</span>
+                        <span class="text-light d-inline-block mb-2">Մարդու իրավունքների պաշտպան</span>
                         <a
-                            href="https://ombuds.am/en_us "
+                            href="https://ombuds.am/ "
                             class="font-weight-bolder government-phones d-block text-decoration-none footer-link"
                             target="_blank"
                         >
                             1-16
+                        </a>
+                    </div>
+                     <div class="mb-4 mb-sm-0">
+                        <span class="text-light d-inline-block mb-2">ՀՀ Աշխատանքի և Սոցիալական հարցերի նախարարություն</span>
+                        <a
+                            href="http://www.mlsa.am/ "
+                            class="font-weight-bolder government-phones d-block text-decoration-none footer-link"
+                            target="_blank"
+                        >
+                            1-14
                         </a>
                     </div>
                 </div>

@@ -13,7 +13,7 @@
                         <div class="form-group row">
                             <label for="Name" class="col-sm-3 text-right control-label col-form-label">Name</label>
                             <div class="col-sm-9">
-                                <input type="text" required class="form-control" id="Name" placeholder="Name"
+                                <input type="text" class="form-control" id="Name" placeholder="Name"
                                        name="name" value="{{$section->name}}">
                                 @error('name')
                                 <div class="alert alert-danger">{{ $message }}</div>

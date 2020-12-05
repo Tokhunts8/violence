@@ -73,6 +73,14 @@
                         </ul>
                     </div>
                 </div>
+            @elseif($section->type === 2)
+                <div class="domestic-violence-description">
+                    <div class="container-fluid custom-container">
+                        @foreach($section->description as $desc)
+                            <p class="m-0">{!!$desc!!}</p>
+                        @endforeach
+                    </div>
+                </div>    
             @endif
         @endforeach
     </main>
