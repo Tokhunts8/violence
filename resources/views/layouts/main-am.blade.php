@@ -163,7 +163,7 @@
                     class="row align-items-center align-items-sm-start justify-content-between text-center text-sm-left"
                 >
                     <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
-                <span class="text-light d-inline-block mb-2 text-nowrap"
+                <span class="text-light d-inline-block mb-2 number-title-am"
                 >Ոստիկանություն</span
                 >
                         <a
@@ -175,7 +175,7 @@
                         </a>
                     </div>
                     <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
-                <span class="text-light d-inline-block mb-2 text-nowrap"
+                <span class="text-light d-inline-block mb-2 number-title-am"
                 >Արտակարգ իրավիճակներ</span
                 >
                         <a
@@ -187,7 +187,7 @@
                         </a>
                     </div>
                     <div class="col-lg-3 col-sm-6 mb-4 mb-sm-0 mb-lg-0">
-                <span class="text-light d-inline-block mb-2 text-nowrap"
+                <span class="text-light d-inline-block mb-2 number-title-am"
                 >Մարդու իրավունքների պաշտպան</span
                 >
                         <a
@@ -199,7 +199,7 @@
                         </a>
                     </div>
                     <div class="col-lg-3 col-sm-6 mb-4 mb-sm-0 mb-lg-0">
-                <span class="text-light d-inline-block mb-2 text-nowrap"
+                <span class="text-light d-inline-block mb-2 number-title-am"
                 >ՀՀ Աշխատանքի և Սոցիալական հարցերի նախարարություն</span
                 >
                         <a

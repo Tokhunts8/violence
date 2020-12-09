@@ -162,7 +162,7 @@
                     class="row align-items-center align-items-sm-start justify-content-between text-center text-sm-left"
                 >
                     <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
-                <span class="text-light d-inline-block mb-2 text-nowrap"
+                <span class="text-light d-inline-block mb-2 number-title"
                 >Police</span
                 >
                         <a
@@ -174,7 +174,7 @@
                         </a>
                     </div>
                     <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
-                <span class="text-light d-inline-block mb-2 text-nowrap"
+                <span class="text-light d-inline-block mb-2 number-title"
                 >Emergency</span
                 >
                         <a
@@ -186,7 +186,7 @@
                         </a>
                     </div>
                     <div class="col-lg-3 col-sm-6 mb-4 mb-sm-0 mb-lg-0">
-                <span class="text-light d-inline-block mb-2 text-nowrap"
+                <span class="text-light d-inline-block mb-2 number-title"
                 >Ombudsperson</span
                 >
                         <a
@@ -198,7 +198,7 @@
                         </a>
                     </div>
                     <div class="col-lg-3 col-sm-6 mb-4 mb-sm-0 mb-lg-0">
-                <span class="text-light d-inline-block mb-2 text-nowrap"
+                <span class="text-light d-inline-block mb-2 number-title"
                 >Ministry of Social Affairs and Labour</span
                 >
                         <a
