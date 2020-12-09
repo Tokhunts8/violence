@@ -13,7 +13,7 @@
                                 <div class="font-weight-bolder font-size-40 mb-3">
                                     {{$section->name}}
                                 </div>
-                                <span
+                                <span class="font-size-16"
                                 >{{strip_tags($section->description)}}
               </span>
                             </div>
@@ -31,7 +31,7 @@
                                     <span class="mr-1">@if($locale === 'en') Read more @elseif($locale === 'am') Ավելին @endif</span>
                                     <span class="icon-read-more"></span>
                                 </a>
-                            @else
+                            @elseif(count($section->mainFiles))
                                 <a
                                     href="{{asset($section->mainFiles[count($section->mainFiles) - 1]->file)}}"
                                     class="read-more secondary-primary font-weight-bold text-decoration-none"
@@ -76,7 +76,7 @@
                                                 <span class="mr-1">@if($locale === 'en') Read more @elseif($locale === 'am') Ավելին @endif</span>
                                                 <span class="icon-read-more"></span>
                                             </a>
-                                        @else
+                                        @elseif(count($section->mainFiles))
                                             <a
                                                 href="{{asset($section->mainFiles[count($section->mainFiles) - 1]->file)}}"
                                                 class="read-more secondary-primary font-weight-bold text-decoration-none"
@@ -136,7 +136,7 @@
                                                         <span class="mr-1">@if($locale === 'en') Read more @elseif($locale === 'am') Ավելին @endif</span>
                                                         <span class="icon-read-more"></span>
                                                     </a>
-                                                @else
+                                                @elseif(count($section->mainFiles))
                                                     <a
                                                         href="{{asset($section->mainFiles[count($section->mainFiles) - 1]->file)}}"
                                                         class="read-more secondary-primary font-weight-bold text-decoration-none"
@@ -175,8 +175,8 @@
                                                             </span>
                                                         </div>
                                                     </a>
-                                                @else
-                                                    <a href="{{asset($child->mainFiles[count($child->mainFiles) - 1]->file)}}"
+                                                @elseif(count($child->mainFiles))
+                                                    <a href="{{asset($child->mainFiles[0]->file)}}"
                                                        target="_blank"
                                                        class="d-flex align-items-center doc-container text-decoration-none">
                                                         <i class="icon-document mr-4"></i>

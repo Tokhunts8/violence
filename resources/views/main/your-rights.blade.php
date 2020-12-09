@@ -33,7 +33,9 @@
                                     <div class="font-weight-bolder text-primary font-size-20 mb-3">
                                         {{$child->name}}
                                     </div>
-                                    {!! $child->description !!}
+                                    <div class="font-size-16">
+                                        {!! $child->description !!}
+                                    </div>
                                 </div>
                             </div>
                             @endforeach
@@ -80,7 +82,7 @@
                             <p class="m-0">{!!$desc!!}</p>
                         @endforeach
                     </div>
-                </div>    
+                </div>
             @endif
         @endforeach
     </main>

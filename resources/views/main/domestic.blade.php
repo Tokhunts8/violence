@@ -5,7 +5,7 @@
         @foreach($sections as $section)
             @if($section->type === 2)
                 <div class="domestic-violence-description">
-                    <div class="container-fluid custom-container">
+                    <div class="container-fluid custom-container font-size-16">
                         @foreach($section->description as $desc)
                             <p class="m-0">{{strip_tags($desc)}}</p>
                         @endforeach
@@ -29,7 +29,7 @@
                                             {{$child->name}}
                                         </div>
                                         <div id="domestic{{$child->id}}" class="collapse">
-                                            <div class="pt-2">
+                                            <div class="pt-2 font-size-16">
                                                 {!! str_replace(['<p>', '<ul>'], ['<p class="font-size-18 mb-0">', '<ul class="inner-list">'], $child->description) !!}
                                             </div>
                                         </div>

@@ -14,7 +14,7 @@ class MainController extends Controller
         if ($locale === 'am') {
             $sectionSelect = ['id', 'name', 'description', 'url', 'type'];
         } elseif ($locale === 'en') {
-            $sectionSelect = ['id', 'eName as name', 'eDescription as description', 'url', 'type'];
+            $sectionSelect = ['id', 'eName as name', 'eDescription as description', 'eUrl as url', 'type'];
         }
 
         $sections = Section::with(['mainFiles', 'child', 'charts'])

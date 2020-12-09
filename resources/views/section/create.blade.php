@@ -61,6 +61,16 @@
                             </div>
                         </div>
                         <div class="form-group row">
+                            <label for="eUrl" class="col-sm-3 text-right control-label col-form-label">URL (English)</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="eUrl" placeholder="URL (English)"
+                                       name="eUrl" value="{{old('eUrl')}}">
+                                @error('eUrl')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="form-group row">
                             <label for="Order" class="col-sm-3 text-right control-label col-form-label">Order</label>
                             <div class="col-sm-9">
                                 <input type="number" required class="form-control" id="Order" placeholder="Order"

@@ -37,6 +37,7 @@
                                     <td>{{$value->eName}}</td>
                                     <td>{!! $value->eDescription !!}</td>
                                     <td>{{substr($value->url, 0, 30) . '...'}}</td>
+                                    <td>{{substr($value->eUrl, 0, 30) . '...'}}</td>
 
                                     <td><span class="font-medium">{{$value->order}}</span></td>
                                     <td>
@@ -77,6 +78,7 @@
                                             <td>{{$v->eName}}</td>
                                             <td>{!! $v->eDescription !!}</td>
                                             <td>{{substr($v->url, 0, 30) . '...'}}</td>
+                                            <td>{{substr($v->eUrl, 0, 30) . '...'}}</td>
 
                                             <td><span class="font-medium">{{$v->order}}</span></td>
                                             <td>

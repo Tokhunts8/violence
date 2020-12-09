@@ -48,6 +48,7 @@ class SectionController extends Controller
         $section->eDescription = $request->eDescription;
         $section->order        = $request->order;
         $section->url          = $request->url;
+        $section->eUrl         = $request->eUrl;
         $section->parent_id    = $request->parent_id;
         $section->page         = $request->page;
         $section->type         = $request->type;
@@ -96,6 +97,7 @@ class SectionController extends Controller
         $section->eDescription = $request->eDescription;
         $section->order        = $request->order;
         $section->url          = $request->url;
+        $section->eUrl         = $request->eUrl;
         $section->parent_id    = $request->parent_id;
         $section->page         = $request->page;
         $section->type         = $request->type;

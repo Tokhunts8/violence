@@ -21,7 +21,8 @@ class CreateSectionsTable extends Migration
             $table->string('eName')->nullable();
             $table->longText('description')->nullable();
             $table->longText('eDescription')->nullable();
-            $table->string('url')->nullable();
+            $table->longText('url')->nullable();
+            $table->longText('eUrl')->nullable();
             $table->bigInteger('order');
             $table->bigInteger('page');
             $table->unsignedBigInteger('type');

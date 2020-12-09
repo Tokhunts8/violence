@@ -32,9 +32,8 @@ class Section extends Model
             $select = ['id', 'name', 'description', 'url', 'type', 'parent_id'];
         }
         else {
-            $select = ['id', 'eName as name', 'eDescription as description', 'type', 'url', 'parent_id'];
+            $select = ['id', 'eName as name', 'eDescription as description', 'type', 'eUrl as url', 'parent_id'];
         }
-
         return $this->hasMany(Section::class, 'parent_id', 'id')->select($select)->orderBy('order', 'asc');
     }
 
