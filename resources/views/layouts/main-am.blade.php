@@ -164,10 +164,10 @@
                 >
                     <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
                 <span class="text-light d-inline-block mb-2 text-nowrap"
-                >Police</span
+                >Ոստիկանություն</span
                 >
                         <a
-                            href="https://www.police.am/en"
+                            href="https://www.police.am"
                             class="font-weight-bolder government-phones d-block text-decoration-none footer-link"
                             target="_blank"
                         >
@@ -176,10 +176,10 @@
                     </div>
                     <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
                 <span class="text-light d-inline-block mb-2 text-nowrap"
-                >Emergency</span
+                >Արտակարգ իրավիճակներ</span
                 >
                         <a
-                            href="http://mes.am/en/"
+                            href="http://mes.am/"
                             class="font-weight-bolder government-phones d-block text-decoration-none footer-link"
                             target="_blank"
                         >
@@ -188,10 +188,10 @@
                     </div>
                     <div class="col-lg-3 col-sm-6 mb-4 mb-sm-0 mb-lg-0">
                 <span class="text-light d-inline-block mb-2 text-nowrap"
-                >Ombudsperson</span
+                >Մարդու իրավունքների պաշտպան</span
                 >
                         <a
-                            href="https://ombuds.am/en_us "
+                            href="https://ombuds.am/"
                             class="font-weight-bolder government-phones d-block text-decoration-none footer-link"
                             target="_blank"
                         >
@@ -200,10 +200,10 @@
                     </div>
                     <div class="col-lg-3 col-sm-6 mb-4 mb-sm-0 mb-lg-0">
                 <span class="text-light d-inline-block mb-2 text-nowrap"
-                >Ministry of Social Affairs and Labour</span
+                >ՀՀ Աշխատանքի և Սոցիալական հարցերի նախարարություն</span
                 >
                         <a
-                            href="https://ombuds.am/en_us "
+                            href="http://www.mlsa.am/"
                             class="font-weight-bolder government-phones d-block text-decoration-none footer-link"
                             target="_blank"
                         >
@@ -221,10 +221,10 @@
                             <div
                                 class="non-governmental-phones-title mb-3 font-weight-bold"
                             >
-                                Non-governmental organizations
+                                Հասարակական կազմակերպություններ
                             </div>
                             <span class="text-light d-inline-block mb-2"
-                            >Women's Support Center</span
+                            >Կանանց աջակցության կենտրոն</span
                             >
                             <a
                                 href="https://www.facebook.com/WomensSupportCenter/"
@@ -237,7 +237,7 @@
                     <div class="col-md-6 mb-2 mb-md-0 d-flex justify-content-center">
                         <div>
                   <span class="text-light d-inline-block"
-                  >Sexual assault crisis center</span
+                  >Սեռական բռնության ճգնաժամային կենտրոն</span
                   >
                             <a
                                 href="https://www.facebook.com/saccarmenia/"
@@ -257,7 +257,7 @@
                 class="footer-button d-inline-block footer-list-info font-size-20 font-weight-bold  pt-2 pb-2 pl-3 pr-3 text-decoration-none"
                 target="_blank"
             >
-                LIST OF SHELTERS AND SUPPORT CENTERS
+                Ապաստարանների և աջակցության կենտրոնների ցուցակ
             </a>
         </center>
 
@@ -269,7 +269,7 @@
                     class="d-inline-block mb-2"
                 />
                 <small class="text-light d-block">
-                    Ministry of Justice of the Republic of Armenia
+                    ՀՀ արդարադատության նախարարություն
                 </small>
             </div>
         </div>
