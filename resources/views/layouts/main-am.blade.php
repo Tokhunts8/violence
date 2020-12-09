@@ -52,7 +52,7 @@
                 >
                     <a
                         class="nav-language-item-link p-0 font-weight-bolder text-decoration-none"
-                        href="{{url('/main/en/' . $view)}}"
+                        href="{{url(($view === 'index') ? ('/en/') : ('/en/' . $view))}}"
                     >ENG</a
                     >
                 </li>
@@ -67,7 +67,7 @@
                     @if($view === 'index')
                         ԱՐՇԱՎԻ ՄԱՍԻՆ
                     @else
-                        <a class="nav-link  p-0" href="{{url('/main/am/index')}}"
+                        <a class="nav-link  p-0" href="{{url('/')}}"
                         >ԱՐՇԱՎԻ ՄԱՍԻՆ</a
                         >
                     @endif
@@ -78,7 +78,7 @@
                     @if($view === 'domestic')
                         ԸՆՏԱՆԵԿԱՆ ԲՌՆՈՒԹՅՈՒՆ
                     @else
-                        <a class="nav-link  p-0" href="{{url('/main/am/domestic')}}"
+                        <a class="nav-link  p-0" href="{{url('/domestic')}}"
                         >ԸՆՏԱՆԵԿԱՆ ԲՌՆՈՒԹՅՈՒՆ</a
                         >
                     @endif
@@ -89,14 +89,14 @@
                     @if($view === 'statistics')
                         ՎԻՃԱԿԱԳՐՈՒԹՅՈՒՆ
                     @else
-                        <a class="nav-link p-0" href="{{url('/main/am/statistics')}}">ՎԻՃԱԿԱԳՐՈՒԹՅՈՒՆ</a>
+                        <a class="nav-link p-0" href="{{url('/statistics')}}">ՎԻՃԱԿԱԳՐՈՒԹՅՈՒՆ</a>
                     @endif
                 </li>
                 <li class="nav-item text-uppercase {{$view === 'your-rights' ? 'active' : ''}} font-weight-bold">
                     @if($view === 'your-rights')
                         ԻՄԱՑԻՐ ՔՈ ԻՐԱՎՈՒՆՔՆԵՐԸ
                     @else
-                        <a class="nav-link p-0" href="{{url('/main/am/your-rights')}}"
+                        <a class="nav-link p-0" href="{{url('/your-rights')}}"
                         >ԻՄԱՑԻՐ ՔՈ ԻՐԱՎՈՒՆՔՆԵՐԸ</a
                         >
                     @endif
@@ -124,7 +124,7 @@
                 >
                         <a
                             class="nav-language-item-link p-0 font-weight-bolder text-decoration-none"
-                            href="{{url('/main/en/' . $view)}}"
+                            href="{{url(($view === 'index') ? ('/en/') : ('/en/' . $view))}}"
                         >ENG</a
                         >
 
@@ -153,7 +153,7 @@
         <div
             class="font-size-30 font-weight-bolder text-light footer-title text-center"
         >
-            LEGAL AND SUPPORT SERVICES
+            ԱՋԱԿՑՈՒԹՅԱՆ ՀԵՌԱԽՈՍԱՀԱՄԱՐՆԵՐ
         </div>
         <div
             class="row flex-column footer-contact-us justify-content-center align-items-center"

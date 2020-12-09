@@ -47,7 +47,7 @@
                 >
                     <a
                         class="nav-language-item-link p-0 font-weight-bolder text-decoration-none"
-                        href="{{url('/main/am/' . $view)}}"
+                        href="{{url(($view === 'index') ? ('/') : ('/' . $view))}}"
                     >ՀԱՅ</a
                     >
                 </li>
@@ -67,7 +67,7 @@
                     @if($view === 'index')
                         THE CAMPAIGN
                     @else
-                        <a class="nav-link  p-0" href="{{url('/main/en/index')}}"
+                        <a class="nav-link  p-0" href="{{url('/en')}}"
                         >THE CAMPAIGN</a
                         >
                     @endif
@@ -78,7 +78,7 @@
                     @if($view === 'domestic')
                         DOMESTIC VIOLENCE
                     @else
-                        <a class="nav-link  p-0" href="{{url('/main/en/domestic')}}"
+                        <a class="nav-link  p-0" href="{{url('/en/domestic')}}"
                         >DOMESTIC VIOLENCE</a
                         >
                     @endif
@@ -89,14 +89,14 @@
                     @if($view === 'statistics')
                         STATISTICS
                     @else
-                        <a class="nav-link p-0" href="{{url('/main/en/statistics')}}">STATISTICS</a>
+                        <a class="nav-link p-0" href="{{url('/en/statistics')}}">STATISTICS</a>
                     @endif
                 </li>
                 <li class="nav-item text-uppercase {{$view === 'your-rights' ? 'active' : ''}} font-weight-bold">
                     @if($view === 'your-rights')
                         KNOW YOUR RIGHTS
                     @else
-                        <a class="nav-link p-0" href="{{url('/main/en/your-rights')}}"
+                        <a class="nav-link p-0" href="{{url('/en/your-rights')}}"
                         >KNOW YOUR RIGHTS</a
                         >
                     @endif
@@ -119,7 +119,7 @@
                 >
                         <a
                             class="nav-language-item-link p-0 font-weight-bolder text-decoration-none"
-                            href="{{url('/main/am/' . $view)}}"
+                            href="{{url(($view === 'index') ? ('/') : ('/' . $view))}}"
                         >ՀԱՅ</a
                         >
                 </li>
