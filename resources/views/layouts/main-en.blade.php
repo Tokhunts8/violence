@@ -235,7 +235,7 @@
                     </div>
                     <div class="col-md-6 mb-2 mb-md-0 d-flex justify-content-center">
                         <div>
-                  <span class="text-light d-inline-block"
+                  <span class="text-light d-inline-block mb-2"
                   >Sexual assault crisis center</span
                   >
                             <a
