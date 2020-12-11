@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\App;
 
 class Section extends Model
 {
@@ -28,7 +29,7 @@ class Section extends Model
 
     public function child()
     {
-        if (strpos($_SERVER['REQUEST_URI'], '/am')) {
+        if (App::getLocale() === 'am') {
             $select = ['id', 'name', 'description', 'url', 'type', 'parent_id'];
         }
         else {
@@ -44,7 +45,7 @@ class Section extends Model
 
     public function mainFiles()
     {
-        if (strpos($_SERVER['REQUEST_URI'], '/am')) {
+        if (App::getLocale() === 'am') {
             $select = ['id', 'file', 'preview', 'parent_id', 'order'];
         }
         else {
@@ -55,7 +56,7 @@ class Section extends Model
 
     public function charts()
     {
-        if (strpos($_SERVER['REQUEST_URI'], '/am')) {
+        if (App::getLocale() === 'am') {
             $select = ['id', 'name', 'value', 'parent_id'];
         }
         else {

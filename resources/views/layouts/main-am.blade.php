@@ -158,12 +158,12 @@
         <div
             class="row flex-column footer-contact-us justify-content-center align-items-center"
         >
-            <div class="col-9 col-md-7 first-col">
+            <div class="col-9 col-lg-10 col-md-7 first-col">
                 <div
                     class="row align-items-center align-items-sm-start justify-content-between text-center text-sm-left"
                 >
-                    <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
-                <span class="text-light d-inline-block mb-2 number-title-am"
+                    <div class="col-sm-6 mb-4 mb-lg-0">
+                <span class="text-light d-inline-block mb-2 number-title"
                 >Ոստիկանություն</span
                 >
                         <a
@@ -174,8 +174,8 @@
                             1-02
                         </a>
                     </div>
-                    <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
-                <span class="text-light d-inline-block mb-2 number-title-am"
+                    <div class="col-sm-6 mb-4 mb-lg-0">
+                <span class="text-light d-inline-block mb-2 number-title"
                 >Արտակարգ իրավիճակներ</span
                 >
                         <a
@@ -186,8 +186,8 @@
                             9-11
                         </a>
                     </div>
-                    <div class="col-lg-3 col-sm-6 mb-4 mb-sm-0 mb-lg-0">
-                <span class="text-light d-inline-block mb-2 number-title-am"
+                    <div class="col-sm-6 mb-4 mb-sm-0 mb-lg-0">
+                <span class="text-light d-inline-block mb-2 number-title"
                 >Մարդու իրավունքների պաշտպան</span
                 >
                         <a
@@ -198,8 +198,8 @@
                             1-16
                         </a>
                     </div>
-                    <div class="col-lg-3 col-sm-6 mb-4 mb-sm-0 mb-lg-0">
-                <span class="text-light d-inline-block mb-2 number-title-am"
+                    <div class="col-sm-6 mb-4 mb-sm-0 mb-lg-0">
+                <span class="text-light d-inline-block mb-2 number-title"
                 >ՀՀ Աշխատանքի և Սոցիալական հարցերի նախարարություն</span
                 >
                         <a
@@ -236,7 +236,7 @@
                     </div>
                     <div class="col-md-6 mb-2 mb-md-0 d-flex justify-content-center">
                         <div>
-                  <span class="text-light d-inline-block mb-2"
+                  <span class="text-light d-inline-block"
                   >Սեռական բռնության ճգնաժամային կենտրոն</span
                   >
                             <a

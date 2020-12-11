@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\App;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,18 +31,22 @@ Auth::routes();
 // armenian
 
 Route::get('/', array(function(){
+    App::setLocale('am');
     return App::make(\App\Http\Controllers\MainController::class)->index('am', 'index');
 }));
 
 Route::get('/domestic', array(function(){
+    App::setLocale('am');
     return App::make(\App\Http\Controllers\MainController::class)->index('am', 'domestic');
 }));
 
 Route::get('/statistics', array(function(){
+    App::setLocale('am');
     return App::make(\App\Http\Controllers\MainController::class)->index('am', 'statistics');
 }));
 
 Route::get('/your-rights', array(function(){
+    App::setLocale('am');
     return App::make(\App\Http\Controllers\MainController::class)->index('am', 'your-rights');
 }));
 
@@ -48,18 +54,22 @@ Route::get('/your-rights', array(function(){
 // english
 
 Route::get('/en', array(function(){
+    App::setLocale('en');
     return App::make(\App\Http\Controllers\MainController::class)->index('en', 'index');
 }));
 
 Route::get('/en/domestic', array(function(){
+    App::setLocale('en');
     return App::make(\App\Http\Controllers\MainController::class)->index('en', 'domestic');
 }));
 
 Route::get('/en/statistics', array(function(){
+    App::setLocale('en');
     return App::make(\App\Http\Controllers\MainController::class)->index('en', 'statistics');
 }));
 
 Route::get('/en/your-rights', array(function(){
+    App::setLocale('en');
     return App::make(\App\Http\Controllers\MainController::class)->index('en', 'your-rights');
 }));
 

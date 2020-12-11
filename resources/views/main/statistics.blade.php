@@ -53,12 +53,14 @@
                                     {{$section->name}}
                                 </div>
 
-                                @foreach($section->mainFiles as $file)
-                                    <img
-                                        src="{{asset($file->file)}}"
-                                        class="mb-5 d-block w-100"
-                                        alt="chart"
-                                    />
+                                @foreach($section->mainFiles as $key => $file)
+                                    @if(empty($section->url) && ($key !== count($section->mainFiles) - 1))
+                                        <img
+                                            src="{{asset($file->file)}}"
+                                            class="mb-5 d-block w-100"
+                                            alt="chart"
+                                        />
+                                    @endif
                                 @endforeach
                                 <div
                                     class="d-flex justify-content-between flex-column flex-md-row align-items-md-center"
@@ -138,7 +140,7 @@
                                                     </a>
                                                 @elseif(count($section->mainFiles))
                                                     <a
-                                                        href="{{asset($section->mainFiles[count($section->mainFiles) - 1]->file)}}"
+                                                        href="{{asset($section->mainFiles[0]->file)}}"
                                                         class="read-more secondary-primary font-weight-bold text-decoration-none"
                                                         target="_blank"
                                                     >

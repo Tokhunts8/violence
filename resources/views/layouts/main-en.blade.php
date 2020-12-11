@@ -157,11 +157,11 @@
         <div
             class="row flex-column footer-contact-us justify-content-center align-items-center"
         >
-            <div class="col-9 col-md-7 first-col">
+            <div class="col-9 col-lg-10 col-md-7 first-col">
                 <div
                     class="row align-items-center align-items-sm-start justify-content-between text-center text-sm-left"
                 >
-                    <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
+                    <div class="col-sm-6 mb-4 mb-lg-0">
                 <span class="text-light d-inline-block mb-2 number-title"
                 >Police</span
                 >
@@ -173,7 +173,7 @@
                             1-02
                         </a>
                     </div>
-                    <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
+                    <div class="col-sm-6 mb-4 mb-lg-0">
                 <span class="text-light d-inline-block mb-2 number-title"
                 >Emergency</span
                 >
@@ -185,7 +185,7 @@
                             9-11
                         </a>
                     </div>
-                    <div class="col-lg-3 col-sm-6 mb-4 mb-sm-0 mb-lg-0">
+                    <div class="col-sm-6 mb-4 mb-sm-0 mb-lg-0">
                 <span class="text-light d-inline-block mb-2 number-title"
                 >Ombudsperson</span
                 >
@@ -197,7 +197,7 @@
                             1-16
                         </a>
                     </div>
-                    <div class="col-lg-3 col-sm-6 mb-4 mb-sm-0 mb-lg-0">
+                    <div class="col-sm-6 mb-4 mb-sm-0 mb-lg-0">
                 <span class="text-light d-inline-block mb-2 number-title"
                 >Ministry of Social Affairs and Labour</span
                 >
@@ -235,7 +235,7 @@
                     </div>
                     <div class="col-md-6 mb-2 mb-md-0 d-flex justify-content-center">
                         <div>
-                  <span class="text-light d-inline-block mb-2"
+                  <span class="text-light d-inline-block"
                   >Sexual assault crisis center</span
                   >
                             <a
