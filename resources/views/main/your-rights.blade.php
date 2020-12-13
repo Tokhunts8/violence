@@ -8,11 +8,11 @@
                     <div class="container-fluid custom-container text-light">
                         @foreach($section->description = explode('</p>', $section->description) as $key => $desc)
                             @if($key +1 !== count($section->description))
-                            <div class="font-size-20 mb-3">
+                            <div class="font-size-20 mb-3 font-weight-bold">
                                 {{strip_tags($desc)}}
                             </div>
                             @else
-                                {!! str_replace(['<ul>', '<li>'], ['<ul class="list-unstyled cover-list">', '<li class="font-size-20 font-weight-bold position-relative">'], $desc) !!}
+                                {!! str_replace(['<ul>', '<li>'], ['<ul class="list-unstyled cover-list">', '<li class="font-size-20 position-relative">'], $desc) !!}
                             @endif
                         @endforeach
                     </div>
@@ -80,6 +80,20 @@
                     <div class="container-fluid custom-container">
                         @foreach($section->description as $desc)
                             <p class="m-0">{!!$desc!!}</p>
+                        @endforeach
+                    </div>
+                </div>
+            @elseif($section->type === 13)
+                <div class="your-rights-support-centers">
+                    <div class="container-fluid custom-container">
+                        @foreach($section->description = explode('</p>', $section->description) as $key => $desc)
+                            @if($key +1 !== count($section->description))
+                                <div class="font-weight-bolder font-size-30 mb-3 mb-md-4">
+                                    {{strip_tags($desc)}}
+                                </div>
+                            @else
+                                {!! str_replace(['<ul>', '<li>'], ['<ul class="list-unstyled cover-list">', '<li class="font-size-20 font-weight-bold position-relative text-secondary mb-3">'], $desc) !!}
+                            @endif
                         @endforeach
                     </div>
                 </div>

@@ -22,6 +22,7 @@
                                 <th scope="col">OTHER LANGUAGE NAME</th>
                                 <th scope="col">OTHER LANGUAGE DESCRIPTION</th>
                                 <th scope="col">URL</th>
+                                <th scope="col">URL (ENGLISH)</th>
                                 <th scope="col">ORDER</th>
                                 <th scope="col">PAGE</th>
                                 <th scope="col">TYPE</th>

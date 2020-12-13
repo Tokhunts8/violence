@@ -28,7 +28,7 @@
                 </div>
             @elseif($section->type === 4)
                 <div class="home-description bg-secondary">
-                    <div class="container-fluid custom-container text-center text-light font-size-16">
+                    <div class="container-fluid custom-container text-center text-light font-size-16 font-size-lg-20">
                         {{strip_tags($section->description)}}
                     </div>
                 </div>

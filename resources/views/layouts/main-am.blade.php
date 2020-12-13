@@ -62,7 +62,7 @@
                 class="navbar-nav flex-row flex-column align-items-start align-items-md-center flex-md-row flex-grow-1 d-md-flex"
             >
                 <li
-                    class="nav-item mr-4 mb-5 mb-md-0 d-inline-block mr-xl-5 {{$view === 'index' ? 'active' : ''}} text-uppercase font-weight-bold"
+                    class="nav-item mr-4 mb-5 mb-md-0 d-inline-block {{$view === 'index' ? 'active' : ''}} text-uppercase font-weight-bold"
                 >
                     @if($view === 'index')
                         ԱՐՇԱՎԻ ՄԱՍԻՆ
@@ -73,7 +73,7 @@
                     @endif
                 </li>
                 <li
-                    class="nav-item mr-4 mb-5 mb-md-0 d-inline-block mr-xl-5 {{$view === 'domestic' ? 'active' : ''}} text-uppercase font-weight-bold"
+                    class="nav-item mr-4 mb-5 mb-md-0 d-inline-block {{$view === 'domestic' ? 'active' : ''}} text-uppercase font-weight-bold"
                 >
                     @if($view === 'domestic')
                         ԸՆՏԱՆԵԿԱՆ ԲՌՆՈՒԹՅՈՒՆ
@@ -84,7 +84,7 @@
                     @endif
                 </li>
                 <li
-                    class="nav-item mr-4 mb-5 mb-md-0 d-inline-block mr-xl-5 {{$view === 'statistics' ? 'active' : ''}} text-uppercase font-weight-bold"
+                    class="nav-item mr-4 mb-5 mb-md-0 d-inline-block {{$view === 'statistics' ? 'active' : ''}} text-uppercase font-weight-bold"
                 >
                     @if($view === 'statistics')
                         ՎԻՃԱԿԱԳՐՈՒԹՅՈՒՆ
@@ -117,16 +117,16 @@
                 <li
                     class="nav-language-item active text-uppercase font-weight-bolder mr-2"
                 >
-                        ՀԱՅ
+                    ՀԱՅ
                 </li>
                 <li
                     class="nav-language-item text-uppercase font-weight-bolder"
                 >
-                        <a
-                            class="nav-language-item-link p-0 font-weight-bolder text-decoration-none"
-                            href="{{url(($view === 'index') ? ('/en/') : ('/en/' . $view))}}"
-                        >ENG</a
-                        >
+                    <a
+                        class="nav-language-item-link p-0 font-weight-bolder text-decoration-none"
+                        href="{{url(($view === 'index') ? ('/en/') : ('/en/' . $view))}}"
+                    >ENG</a
+                    >
 
                 </li>
             </ul>
@@ -158,11 +158,11 @@
         <div
             class="row flex-column footer-contact-us justify-content-center align-items-center"
         >
-            <div class="col-9 col-lg-10 col-md-7 first-col">
+            <div class="col-9 col-md-8 col-lg-10 first-col">
                 <div
                     class="row align-items-center align-items-sm-start justify-content-between text-center text-sm-left"
                 >
-                    <div class="col-sm-6 mb-4 mb-lg-0">
+                    <div class="col-sm-6 col-lg-3 mb-4 mb-lg-0 text-center">
                 <span class="text-light d-inline-block mb-2 number-title"
                 >Ոստիկանություն</span
                 >
@@ -174,7 +174,7 @@
                             1-02
                         </a>
                     </div>
-                    <div class="col-sm-6 mb-4 mb-lg-0">
+                    <div class="col-sm-6 col-lg-3 mb-4 mb-lg-0 text-center">
                 <span class="text-light d-inline-block mb-2 number-title"
                 >Արտակարգ իրավիճակներ</span
                 >
@@ -186,7 +186,7 @@
                             9-11
                         </a>
                     </div>
-                    <div class="col-sm-6 mb-4 mb-sm-0 mb-lg-0">
+                    <div class="col-sm-6 col-lg-3 mb-4 mb-sm-0 mb-lg-0 text-center">
                 <span class="text-light d-inline-block mb-2 number-title"
                 >Մարդու իրավունքների պաշտպան</span
                 >
@@ -198,7 +198,7 @@
                             1-16
                         </a>
                     </div>
-                    <div class="col-sm-6 mb-4 mb-sm-0 mb-lg-0">
+                    <div class="col-sm-6 col-lg-3 mb-4 mb-sm-0 mb-lg-0 text-center">
                 <span class="text-light d-inline-block mb-2 number-title"
                 >ՀՀ Աշխատանքի և Սոցիալական հարցերի նախարարություն</span
                 >
@@ -212,20 +212,18 @@
                     </div>
                 </div>
             </div>
-            <div class="col-9 col-md-7 second-col pl-4">
+            <div class="col-9 col-md-8 col-lg-6 second-col pl-4 text-center">
+                <div class="non-governmental-phones-title mb-3 font-weight-bold">
+                    Հասարակական կազմակերպություններ
+                </div>
                 <div
-                    class="row text-center align-items-center align-items-md-end text-sm-left"
+                    class="row align-items-center align-items-md-end"
                 >
                     <div class="col-md-6 mb-3 mb-md-0 d-flex justify-content-center">
                         <div class="mb-4 mb-sm-0">
-                            <div
-                                class="non-governmental-phones-title mb-3 font-weight-bold"
-                            >
-                                Հասարակական կազմակերպություններ
-                            </div>
-                            <span class="text-light d-inline-block mb-2"
-                            >Կանանց աջակցության կենտրոն</span
-                            >
+                  <span class="text-light d-inline-block mb-2"
+                  >Կանանց աջակցության կենտրոն</span
+                  >
                             <a
                                 href="https://www.facebook.com/WomensSupportCenter/"
                                 class="font-weight-bolder non-governmental-phones footer-link d-block text-decoration-none"
@@ -236,7 +234,7 @@
                     </div>
                     <div class="col-md-6 mb-2 mb-md-0 d-flex justify-content-center">
                         <div>
-                  <span class="text-light d-inline-block"
+                  <span class="text-light d-inline-block mb-2"
                   >Սեռական բռնության ճգնաժամային կենտրոն</span
                   >
                             <a
@@ -250,17 +248,19 @@
                 </div>
             </div>
         </div>
-
-        <center class="mb-5">
-            <a
-                href="http://www.mlsa.am/?page_id=19928"
-                class="footer-button d-inline-block footer-list-info font-size-20 font-weight-bold  pt-2 pb-2 pl-3 pr-3 text-decoration-none"
-                target="_blank"
-            >
-                Ապաստարանների և աջակցության կենտրոնների ցուցակ
-            </a>
-        </center>
-
+        <div class="row justify-content-center">
+            <div class="col-sm-9 col-md-8">
+                <div class="mb-5 text-center">
+                    <a
+                        href="http://www.mlsa.am/?page_id=19928"
+                        class="footer-button d-inline-block footer-list-info font-size-20 font-weight-bold  pt-2 pb-2 pl-4 pr-4 text-decoration-none"
+                        target="_blank"
+                    >
+                        Ապաստարանների և աջակցության կենտրոնների ցուցակ
+                    </a>
+                </div>
+            </div>
+        </div>
         <div class="d-flex justify-content-center text-center emblem">
             <div>
                 <img

@@ -59,6 +59,14 @@ class TypesTableSeeder extends Seeder
                 'id'   => 11,
                 'name' => 'բաժանված'
             ],
+            [
+                'id'   => 12,
+                'name' => 'նկարներ'
+            ],
+            [
+                'id'   => 13,
+                'name' => 'առանց ֆոնի ցուցակ'
+            ],
         ]);
     }
 }
